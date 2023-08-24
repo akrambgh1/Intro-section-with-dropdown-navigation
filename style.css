@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Epilogue", sans-serif;
+}
+header {
+  display: flex;
+  justify-content: space-around;
+  padding: 2%;
+  align-items: center;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#navbar {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+.sub {
+  display: flex;
+  width: 15%;
+  gap: 20%;
+  align-items: center;
+}
+.register {
+  padding: 5% 10%;
+  border-radius: 15px;
+  border: 2px solid rgb(112, 112, 112);
+}
+.register:hover {
+  border: 2px solid #000000;
+}
+a {
+  font-weight: 500;
+  color: rgb(112, 112, 112);
+  cursor: pointer;
+  text-decoration: none;
+}
+a:hover {
+  color: black;
+}
+section {
+  display: flex;
+  padding: 1% 8% 5%;
+  justify-content: center;
+  height: 85vh;
+  gap: 10%;
+}
+.container {
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8%;
+}
+
+.img {
+  background-image: url(./images/image-hero-desktop.png);
+  height: 100%;
+  width: 30%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.container h1 {
+  font-size: 5rem;
+}
+.container h1 span {
+  display: block;
+}
+.container .brands {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+}
+.container p {
+  color: rgb(112, 112, 112);
+  line-height: 30px;
+  width: 80%;
+  font-size: 1.5rem;
+}
+.container a {
+  display: block;
+  background: transparent;
+  cursor: pointer;
+  padding: 2% 5%;
+  border: none;
+  border: 2px solid #000000;
+  position: relative;
+  z-index: 2;
+  transition: 0.5s;
+  border-radius: 15px;
+  color: aliceblue;
+}
+.container a::after {
+  content: "";
+  position: absolute;
+  transform: scale(1);
+  transform-origin: center;
+  border-radius: 12.5px;
+  top: 0;
+  left: 0;
+  border: none;
+  width: 100%;
+  transition: 0.2s;
+  z-index: -1;
+  background: #000000;
+  height: 100%;
+}
+.container a:hover::after {
+  transform: scale(0);
+}
+.container a:hover {
+  color: rgb(112, 112, 112);
+}
+.close-btn {
+  display: none;
+}
+.btnmenu {
+  display: none;
+}
+.Menu-FeaTures {
+  position: absolute;
+  box-shadow: 0px 0px 20px 0px rgba(191, 191, 191, 0.69);
+  background: white;
+  padding: 1%;
+  border-radius: 10px;
+  top: 9%;
+  left: 8%;
+  display: none;
+  width: 150px;
+}
+
+
+.Menu-company {
+  position: absolute;
+  box-shadow: 0px 0px 20px 0px rgba(191, 191, 191, 0.69);
+  background: white;
+  padding: 1%;
+  border-radius: 10px;
+  top: 9%;
+  left: 19%;
+  display: none;
+}
+.Menu-FeaTures ul {
+  line-height: 30px;
+  user-select: none;
+  list-style: none;
+}
+.Menu-FeaTures ul li {
+  height: 28px;
+  cursor: pointer;
+}
+.Menu-company ul {
+  list-style: none;
+  user-select: none;
+  line-height: 30px;
+}
+.Menu-company ul li {
+  cursor: pointer;
+}
+.menu-arrow-up {
+  display: none;
+}
+
+.Menu-FeaTures ul li span img {
+  margin-right: 10%;
+}
+
+.close-btn-big {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .close-btn-big {
+    width: 100%;
+    display: block;
+  }
+  .close-btn {
+    position: relative;
+    display: block;
+    left: 210;
+  }
+  header {
+    justify-content: space-between;
+  }
+  section {
+    flex-direction: column-reverse;
+    height: 90vh;
+    padding: 0;
+    gap: 10px;
+    width: 100%;
+  }
+  .img {
+    height: 80%;
+    width: 100%;
+    background-image: url(./images/image-hero-mobile.png);
+    background-size: contain;
+  }
+  .container {
+    height: 90vh;
+    width: 100%;
+    align-items: center;
+    position: relative;
+    padding: 0 5%;
+  }
+  .container h1 span {
+    display: inline-flex;
+  }
+  .container h1 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .container p {
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+  .container .brands {
+    position: relative;
+    width: 100%;
+  }
+  .container .brands {
+    position: relative;
+  }
+  .container button {
+    height: 50px;
+  }
+  .container .brands img {
+    height: 50%;
+    width: auto;
+  }
+  .btnmenu {
+    display: block;
+    cursor: pointer;
+  }
+  .navbar {
+    position: absolute;
+    right: 0;
+    width: 70%;
+    box-shadow: -200px 1px 51px 200px rgba(0, 0, 0, 0.719);
+    -webkit-box-shadow: -200px 1px 51px 200px rgba(0, 0, 0, 0.719);
+    -moz-box-shadow: -200px 1px 51px 200px rgba(0, 0, 0, 0.719);
+    height: 100%;
+    display: flex;
+    transform: scaleX(0);
+    transform-origin: right;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    background: white;
+    top: 0;
+    z-index: 100;
+    padding: 5%;
+  }
+  #navbar {
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  #navbar a {
+    margin-top: 50px;
+  }
+  .sub {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .sub .register {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+  }
+  .Menu-FeaTures {
+    width: auto;
+    position: relative;
+    box-shadow: 0px 0px red;
+    top: 10px;
+    left: 20px;
+  }
+  .Menu-company {
+    position: relative;
+    box-shadow: 0px 0px red;
+
+    top: 10px;
+    left: 20px;
+  }
+  .Menu-FeaTures ul {
+    height: auto ;
+    line-height: 50px;
+  }
+  .Menu-FeaTures ul li{
+    height: auto ;
+  }
+  .Menu-company ul {
+    line-height: 50px;
+  }
+  .Menu-FeaTures ul li span img {
+    width: 16px;
+    height: 18px;
+  }
+}
+h1,
+p,
+a {
+  user-select: none;
+}
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+}
